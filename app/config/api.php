@@ -87,7 +87,7 @@ $config['refresh_token_expiration'] = 604800;
 | committed or exposed, rotate it. All existing tokens become invalid.
 |
 */
-$config['jwt_secret'] = 'CHANGE_THIS_TO_A_LONG_RANDOM_SECRET_123456789';
+$config['jwt_secret'] = getenv('JWT_SECRET') ?: '';
 
 /*
 |--------------------------------------------------------------------------
@@ -106,7 +106,7 @@ $config['jwt_secret'] = 'CHANGE_THIS_TO_A_LONG_RANDOM_SECRET_123456789';
 |   php -r "echo bin2hex(random_bytes(32));"
 |
 */
-$config['refresh_token_key'] = 'CHANGE_THIS_TO_ANOTHER_LONG_SECRET_987654321';
+$config['refresh_token_key'] = getenv('REFRESH_TOKEN_KEY') ?: '';
 
 /*
 |--------------------------------------------------------------------------
@@ -165,7 +165,7 @@ $config['refresh_token_table'] = 'refresh_tokens';
 | application's name or URL.
 |
 */
-$config['jwt_issuer'] = 'http://localhost:3000';
+$config['jwt_issuer'] = 'https://marasigan-king-emmanuel-lavalust-api.onrender.com';
 
 /*
 |--------------------------------------------------------------------------
@@ -176,7 +176,7 @@ $config['jwt_issuer'] = 'http://localhost:3000';
 |
 */
 
-$config['jwt_audience'] = 'http://localhost:5173';
+$config['jwt_audience'] = 'https://lavalust-lab6-react.vercel.app';
 
 /*
 |--------------------------------------------------------------------------
