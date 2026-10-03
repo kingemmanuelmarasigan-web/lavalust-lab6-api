@@ -43,5 +43,23 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 |
 */
 /** @var object $router **/
+$router->post('api/login', 'ApiController::login');
 
-$router->get('/', 'Welcome::index');
+$router->post('api/logout', 'ApiController::logout');
+
+$router->get('api/products', 'ApiController::products');
+
+$router->post('api/products', 'ApiController::add_product');
+
+$router->put('api/products/{id}', 'ApiController::update_product');
+
+$router->delete('api/products/{id}', 'ApiController::delete_product');
+
+$router->get('create-migration/{migration_class}', 'MigrationController::create_migration');
+$router->get('migrate', 'MigrationController::migrate');
+$router->get('rollback', 'MigrationController::rollback');
+$router->get('rollback-all', 'MigrationController::rollback_all');
+$router->get('refresh', 'MigrationController::refresh');
+$router->get('status', 'MigrationController::status');
+$router->get('setup/create-user', 'SetupController::create_user');
+

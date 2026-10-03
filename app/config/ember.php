@@ -42,7 +42,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 | Used for Enabling or Disabling Ember Helper
 |
 */
-$config['ember_helper_enabled'] = FALSE;
+$config['ember_helper_enabled'] = false;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,4 +88,4 @@ $config['escape_context']     = 'html';
 | Used for Allowing or Disallowing Raw PHP Code in Templates (strongly recommended to keep false for security)
 |
 */
-$config['enable_php_blocks']  = FALSE;
+$config['enable_php_blocks']  = false;

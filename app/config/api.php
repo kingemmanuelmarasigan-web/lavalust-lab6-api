@@ -44,7 +44,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 | below (see their notes). The API library refuses to start otherwise.
 |
 */
-$config['api_helper_enabled'] = FALSE;
+$config['api_helper_enabled'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,7 +87,7 @@ $config['refresh_token_expiration'] = 604800;
 | committed or exposed, rotate it. All existing tokens become invalid.
 |
 */
-$config['jwt_secret'] = getenv('JWT_SECRET') ?: '';
+$config['jwt_secret'] = 'CHANGE_THIS_TO_A_LONG_RANDOM_SECRET_123456789';
 
 /*
 |--------------------------------------------------------------------------
@@ -106,7 +106,7 @@ $config['jwt_secret'] = getenv('JWT_SECRET') ?: '';
 |   php -r "echo bin2hex(random_bytes(32));"
 |
 */
-$config['refresh_token_key'] = getenv('REFRESH_TOKEN_KEY') ?: '';
+$config['refresh_token_key'] = 'CHANGE_THIS_TO_ANOTHER_LONG_SECRET_987654321';
 
 /*
 |--------------------------------------------------------------------------
@@ -129,8 +129,8 @@ $config['jwt_verify_user'] = TRUE;
 |--------------------------------------------------------------------------
 |
 | Name of the table holding your users. It needs at least the columns
-| "id" and "role". Used when refreshing tokens and when jwt_verify_user
-| is TRUE.
+| "id" and "role". Used when refreshing tokens and when jwt_verify_user is
+| TRUE.
 |
 */
 $config['users_table'] = 'users';
@@ -165,7 +165,7 @@ $config['refresh_token_table'] = 'refresh_tokens';
 | application's name or URL.
 |
 */
-$config['jwt_issuer'] = 'your-app';
+$config['jwt_issuer'] = 'http://localhost:3000';
 
 /*
 |--------------------------------------------------------------------------
@@ -176,7 +176,7 @@ $config['jwt_issuer'] = 'your-app';
 |
 */
 
-$config['jwt_audience'] = 'your-app-clients';
+$config['jwt_audience'] = 'http://localhost:5173';
 
 /*
 |--------------------------------------------------------------------------
@@ -185,7 +185,7 @@ $config['jwt_audience'] = 'your-app-clients';
 | These settings are used for API rate limiting.
 |
 */
-$config['rate_limit_enabled'] = true;
+$config['rate_limit_enabled'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
