@@ -44,7 +44,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 | below (see their notes). The API library refuses to start otherwise.
 |
 */
-$config['api_helper_enabled'] = TRUE;
+$config['api_helper_enabled'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
@@ -129,8 +129,8 @@ $config['jwt_verify_user'] = TRUE;
 |--------------------------------------------------------------------------
 |
 | Name of the table holding your users. It needs at least the columns
-| "id" and "role". Used when refreshing tokens and when jwt_verify_user is
-| TRUE.
+| "id" and "role". Used when refreshing tokens and when jwt_verify_user
+| is TRUE.
 |
 */
 $config['users_table'] = 'users';
@@ -165,7 +165,7 @@ $config['refresh_token_table'] = 'refresh_tokens';
 | application's name or URL.
 |
 */
-$config['jwt_issuer'] = 'https://marasigan-king-emmanuel-lavalust-api.onrender.com';
+$config['jwt_issuer'] = 'your-app';
 
 /*
 |--------------------------------------------------------------------------
@@ -176,7 +176,7 @@ $config['jwt_issuer'] = 'https://marasigan-king-emmanuel-lavalust-api.onrender.c
 |
 */
 
-$config['jwt_audience'] = 'https://lavalust-lab6-react.vercel.app';
+$config['jwt_audience'] = 'your-app-clients';
 
 /*
 |--------------------------------------------------------------------------
@@ -185,7 +185,7 @@ $config['jwt_audience'] = 'https://lavalust-lab6-react.vercel.app';
 | These settings are used for API rate limiting.
 |
 */
-$config['rate_limit_enabled'] = TRUE;
+$config['rate_limit_enabled'] = true;
 
 /*
 |--------------------------------------------------------------------------
